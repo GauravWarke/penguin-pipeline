@@ -1,0 +1,50 @@
+---
+title: "workshop 2"
+format: 
+   html:
+      theme: cerulean
+   pdf:
+      theme: cerulean
+editor: visual
+---
+
+## Load Libraries
+
+```{r}
+#| echo: False
+knitr::opts_chunk$set(echo=FALSE)
+library(rmarkdown)
+library(knitr)
+library(tidyverse)
+library(readr)
+library(kableExtra)
+library(ggplot2)
+```
+
+## Running Code
+
+```{r}
+#| warning: FALSE
+#| message: FALSE
+#| echo: FALSE
+1 + 1
+```
+
+```{r}
+#| echo: false
+dat<-read_csv("avian_influenza_numbers.csv")
+head(dat)
+```
+
+```{r}
+head(dat)
+```
+
+# Introduction
+
+### “In this tutorial we are looking at the "*Avian Influenza*"cases detected globally since 1997.”
+
+[“US CDC”](https://www.cdc.gov/bird-flu/php/avian-flu-summary/chart-epi-curve-ah5n1.html)
+
+```{r}
+```
