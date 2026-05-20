@@ -1,0 +1,25 @@
+---
+title: "Penguins Analysis"
+format: html
+execute:
+  echo: true
+---
+
+```{r}
+library(targets)
+library(gtsummary)
+tar_read(clean_data)
+```
+
+You can add options to executable code like this
+
+```{r}
+#| results: asis
+tar_load(models)
+
+lapply(models, function(input) {
+   tbl_regression(input)
+})
+```
+
+The `echo: false` option disables the printing of code (only output is displayed).
